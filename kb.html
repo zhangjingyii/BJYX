@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BJYXSZD</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<style>
+			* {
+    			box-sizing: border-box;
+			}
+			/*body样式*/
+			body{
+				background-color:lightsteelblue;
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 0%;
+			}
+            /*下拉导航栏*/
+			ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a, .dropbtn {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover, .dropdown:hover .dropbtn {
+                background-color: white;
+                color: black;
+            }
+
+            li.dropdown {
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+			
+        </style>
+        <link rel="stylesheet" type="text/css" href="mystyle.css" />
+
+	</head>
+
+	<body style="position: static;">
+		<div class="header">
+			<h1>BJYXSZD</h1>
+			<p>嗑药鸡的快乐天堂</p>
+		</div>
+		<ul>
+            <li><a class="active" href="main.html">主页</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">糖点及物料时间轴</a>
+              <div class="dropdown-content">
+                <a href="#">花田初遇</a>
+                <a href="#">天各一方</a>
+                <a href="juzu.html">陈情令剧组</a>
+                <a href="#">天津见面会</a>
+                <a href="#">泰国见面会</a>
+                <a href="#">南京演唱会</a>
+                <a href="#">新浪扫楼</a>
+                <a href="#">天天向上</a>
+                <a href="kb.html">快乐大本营16学</a>
+                <a href="#">双人晚会</a>
+                <a href="#">无双人活动至今</a>
+              </div>
+            <li><a href="forum.html">最新讨论</a></li>
+            <li><a href="#">物料</a></li>
+            <li><a href="#">产出</a></li> 
+            </li>
+          </ul>
+        <div class="main">
+            <p style="text-align: center;">
+                <video width="80%" height=auto  controls="controls">
+                    <source src="kb1.mp4" type="video/mp4" />
+                    <source src="kb1.ogg" type="video/ogg" />
+                    <source src="kb1.webm" type="video/webm" />
+                    <object data="kb1.mp4" width="320" height="240">
+                      <embed src="kb1.swf" width="320" height="240" />
+                    </object>
+                </video>
+                <video width="80%" height=auto  controls="controls">
+                    <source src="kb2.mp4" type="video/mp4" />
+                    <source src="kb2.ogg" type="video/ogg" />
+                    <source src="kb2.webm" type="video/webm" />
+                    <object data="kb2.mp4" width="320" height="240">
+                      <embed src="kb2.swf" width="320" height="240" />
+                    </object>
+                </video>
+            </p>
+            
+            
+        </div>
+        
+		
+		  
+		  <div class="footer">
+			<h2>回到顶部</h2>
+		  </div>
+		
+	</body>
+
+</html>

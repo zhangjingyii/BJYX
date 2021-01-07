@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BJYXSZD</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="Custom Theme">
+		<meta http-equiv="refresh" content="20;url=main.html" />
+
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+            	padding: 0;
+			}
+			/*body样式*/
+			body{
+				background-color:lightsteelblue;
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 0%;
+			}
+		
+			img{
+				max-width: 100%;
+				height: auto;
+			}
+		
+        .box{
+            width: 300px;
+            margin: 0 auto;
+        }
+        ul{
+            list-style: none;
+        }
+        ul li{
+            height: 50px;
+            border: 1px solid #b0b0b0;
+            margin-top: 10px;
+            line-height: 50px;
+            padding-left: 10px;
+        }
+        ul li span{
+            float: right;
+            height: 30px;
+            margin-top: 10px;
+            color: #fff;
+            line-height: 30px;
+            font-size: 12px;
+            padding: 0 10px;
+        }
+        ul li span.update{
+            background-color: purple;
+            margin:10px 20px;
+        }
+        ul li span.delete{
+            background-color: red;
+        }
+        .addBtn{
+            height: 50px;
+            background-color: green;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            margin-top: 20px;
+        }
+   
+            
+			
+		</style>
+		
+		<link rel="stylesheet" type="text/css" href="mystyle.css" />
+
+	</head>
+
+	<body>
+
+
+		<div class="header">
+			<h1>BJYXSZD</h1>
+			<p>往前走是忘羡，往后走是我们。</p>
+		</div>
+		<div class="navbar">
+			<a href="main.html">主页</a>
+			<a href="timeline.html">糖点时间轴</a>
+			<a href="">最新讨论</a>
+			<a href="#">物料</a>
+			<a href="#">产出</a>
+			<a href="myspace.html" class="right">我的空间</a>
+		</div>
+		<div class="row">
+			<div class="side">
+				<br>
+				<img src="bobo.jpg" alt="" ><br><br>
+				<h3>@你的可爱网友小张</h3><br>
+				<a href="https://space.bilibili.com/13325889"><h4>B站up</h4></a><br>
+				<h4>微博保密</h4><br>
+				<h4>垃圾话大王</h4><br>
+				<h4>我与夏风皆过客，惟愿博肖揽星河</h4><br>
+				<h4>夏天的浪漫秘密</h4><br>
+				<a href="myspace.html"><h3>返回主页</h3></a>
+				
+				
+			</div>
+			<div class="main">
+				<div class="box">
+					<ul>
+						<li>BJYXSZD <span class="update">修改</span><span class="delete">删除</span></li>
+						<li>博君一肖是真的 <span class="update">修改</span><span class="delete">删除</span></li>
+						<li>并肩于雪山之巅 <span class="update">修改</span><span class="delete">删除</span></li>
+						<li>北京一宵是真的 <span class="update">修改</span><span class="delete">删除</span></li>
+					</ul>
+					<div class="addBtn" id="addBtn">添加一项</div>
+                </div>
+				<script>
+					var addBtn = document.getElementById('addBtn');
+					var oUl = document.getElementsByTagName('ul')[0];
+					var upds = document.getElementsByClassName('update');
+					var dels = document.getElementsByClassName('delete');
+					addBtn.onclick = function () {
+						var res = prompt('请输入要添加的内容');//'aa' '' null
+						if(res){
+							var oLi = document.createElement('li');
+							oLi.innerHTML = res+'<span class="update">修改</span><span class="delete">删除</span>';
+							oUl.appendChild(oLi);
+						}
+					};
+				
+					oUl.onclick = function (event) {//event事件对象
+						event = event || window.event;//处理ie下兼容性
+						var tar = event.target||event.srcElement; //事件源
+						console.log(tar);
+						if(tar.innerHTML === '修改'){
+							var res = prompt('请输入修改的内容');
+							if(res){
+								var oLi = document.createElement('li');
+								oLi.innerHTML = res+'<span class="update">修改</span><span class="delete">删除</span>';
+								oUl.replaceChild(oLi,tar.parentNode);
+							}
+						}
+						if(tar.innerHTML === '删除'){
+							if(confirm('确定要删除该项吗？')){
+								oUl.removeChild(tar.parentNode);
+							}
+						}
+					}
+                </script>
+               <div class="container">
+                <!-- BEGIN MAIN CONTENT -->
+                <section class="error-wrapper">
+                    <br>
+                    <p class="page-404">
+                        <span>页面自动</span>
+                        <a href="http://blog.csdn.net/zhihua_w"><button>返回首页</button></a>
+                        <span>等待时间：</span>
+                        <span class="second">20s</span>
+                    </p>
+                </section>
+                <!-- END MAIN CONTENT -->
+            </div>
+            <script src="js/jquery.js"></script>
+				
+				
+			</div>
+		  </div>
+		
+		  </div>
+		  
+		  <div class="footer">
+			<h2>回到顶部</h2>
+		  </div>
+		
+	</body>
+
+</html>

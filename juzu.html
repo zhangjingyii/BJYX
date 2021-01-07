@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BJYXSZD</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<style>
+			* {
+    			box-sizing: border-box;
+			}
+			/*body样式*/
+			body{
+				background-color:lightsteelblue;
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 0%;
+            }
+            
+            
+			
+            /*下拉导航栏*/
+			ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a, .dropbtn {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover, .dropdown:hover .dropbtn {
+                background-color: white;
+                color: black;
+            }
+
+            li.dropdown {
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {background-color: #f1f1f1}
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+			img{
+				max-width: 100%;
+				height: auto;
+            }
+            
+            html {
+  background: #f5f7f8;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 20px 0;
+}
+
+.band {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  
+  display: grid;
+  
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  
+}
+
+@media only screen and (min-width: 500px) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }  
+  .item-1 {
+  grid-column: 1/ span 2;
+  }
+  .item-1 h1 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .band {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* card */
+
+.card {
+  min-height: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #444;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+}
+
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+.card article {
+  padding: 20px;
+  display: flex;
+  
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
+  
+}
+.card .thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.card p { 
+  flex: 1; /* make p grow to fill available space*/
+  line-height: 1.4;
+}
+
+/* typography */
+h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.card span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 2em 0 0 0;
+}
+	
+        </style>
+        <link rel="stylesheet" type="text/css" href="mystyle.css" />
+
+	</head>
+
+	<body>
+		<div class="header">
+			<h1>BJYXSZD</h1>
+			<p>往前走是忘羡，往后走是我们。</p>
+		</div>
+		<ul>
+            <li><a class="active" href="main.html">主页</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn" >糖点及物料时间轴</a>
+              <div class="dropdown-content">
+                <a href="#">花田初遇</a>
+                <a href="#">天各一方</a>
+                <a href="juzu.html">陈情令剧组</a>
+                <a href="tjjmh.html">天津见面会</a>
+                <a href="tgjmh.html">泰国见面会</a>
+                <a href="#">南京演唱会</a>
+                <a href="#">新浪扫楼</a>
+                <a href="#">天天向上</a>
+                <a href="kb.html">快乐大本营16学</a>
+                <a href="#">双人晚会</a>
+                <a href="#">无双人活动至今</a>
+              </div>
+            <li><a href="forum.html">最新讨论</a></li>
+            <li><a href="#">物料</a></li>
+            <li><a href="#">产出</a></li> 
+            </li>
+          </ul>
+          
+          <div class="support-grid"></div>
+
+          <div class="band">
+            <div class="item-1">
+                <a href="bazzor.html" class="card">
+                    <div class="thumb" style="background-image: url(bazzor.png);"></div>
+                    <article>
+                      <h1>双人采访合集</h1>
+                      <span>Mary Winkler</span>
+                    </article>
+                  </a>
+            </div>
+          <div class="item-2">
+                <a href="" class="card">
+                    <div class="thumb" style="background-image: url(wwx.png);"></div>
+                    <article>
+                      <h1>片场互动yue</h1>
+                      <p>眼神肢体糖点</p>
+                      <span>Harry Brignull</span>
+                    </article>
+                  </a>
+          </div>
+            <div class="item-3">
+              <a href="#" class="card">
+                <div class="thumb" style="background-image: url(lwj.png);"></div>
+                <article>
+                  <h1>自动结界 无宾感</h1>
+                  <p>想必是老夫老妻了</p>
+                  <span>Melody Nieves</span>
+                </article>
+              </a>
+          </div>  
+          <div class="item-1">
+            <a href="bazzor.html" class="card">
+              <div class="thumb" style="background-image: url(IMG_0736.GIF);"></div>
+              <article>
+                <h1>前世今生</h1>
+                <p>"闻机色变"</p>
+                <span>Mary Winkler</span>
+              </article>
+            </a>
+          </div>
+        <div class="item-4">
+              <a href="#" class="card">
+                <div class="thumb" style="background-image: url(xx.png);"></div>
+                <article>
+                  <h1>i双标速速集合</h1>
+                  <p>双标真的太nm好嗑了</p>
+                  <span>Harry Brignull</span>
+                </article>
+              </a>
+        </div>
+        <div class="item-5">
+          <a href="#" class="card">
+            <div class="thumb" style="background-image: url(9xue.JPG);"></div>
+            <article>
+              <h1>当龟必修课开课</h1>
+              <p>九学</p>
+              <span>Melody Nieves</span>
+            </article>
+          </a>
+        </div>
+            <div class="item-6">
+                  <a href="#" class="card">
+                    <div class="thumb" style="background-image: url(剧组2.png);"></div>
+                    <article>
+                      <h1>忘羡-是爱情啊</h1>
+                      <p>炽热的夏天是因为足够的尊重和相信</p>
+                      <span>Kezz Bracey</span>
+                    </article>
+                  </a>
+            </div>
+            <div class="item-7">
+                  <a href="#" class="card">
+                    <div class="thumb" style="background-image: url(剧组3.png);"></div>
+                    <article>
+                      <h1>小学鸡剧组互殴日常</h1>
+                      <span>Rose</span>
+                    </article>
+                  </a>
+            </div>
+            <div class="item-8">
+              <a href="#" class="card">
+                <div class="thumb" style="background-image: url(juzu.png);"></div>
+                <article>
+                  <h1>化妆间那个什么 有</h1>
+                  <p>好家伙 最影响工作人员的娱乐圈恶童&灭霸实锤</p>
+                  <span>Marie Gardiner</span>
+                </article>
+              </a>
+            </div>
+            <div class="item-9">
+              <a href="#" class="card">
+                <div class="thumb" style="background-image: url(11.png);"></div>
+                <article>
+                  <h1>老王老肖名语录</h1>
+                  <p>“战哥弟弟爱你”</p>
+                  <p>“战哥没有丑的时候”</p>
+                  <span>Kendra Schaefer</span>
+                </article>
+              </a>
+            </div>
+            
+          </div>
+        
+		  
+		  <div class="footer">
+			<h2>回到顶部</h2>
+		  </div>
+		
+	</body>
+
+</html>
